@@ -1,0 +1,44 @@
+#whatsappNotification {
+    position: fixed;
+    bottom:100px;
+    right: 20px; /* Posiciona o centro do botão no meio da tela */
+    background-color: #25d366; /* Cor do WhatsApp */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: none; /* Oculta inicialmente */
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 9999;
+
+    /* Propriedades para a animação */
+    animation: pulse 1.5s infinite ease-in-out;
+}
+
+/* Efeito de hover */
+#whatsappNotification:hover {
+  background-color: #22bb5b; /* Cor de hover */
+}
+
+/* Animação pulsante */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1); /* Aumenta o tamanho em 10% */
+    opacity: 0.7; /* Reduz a opacidade */
+  }
+  100% {
+    transform: scale(1); /* Volta ao tamanho normal */
+    opacity: 1; /* Volta à opacidade original */
+  }
+}
+
+
+.text-colorM{
+   color: #e9e8fb;
+}
