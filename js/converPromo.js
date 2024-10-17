@@ -13,12 +13,23 @@ function redirectToWhatsApp() {
 
 // Exibe a notificação após 5 segundos
 // Função para exibir a notificação após 5 segundos
-setTimeout(function() {
-    document.getElementById('whatsappNotification').style.display = 'block';
+function mostrarNotificacaoAleatoria() {
+    // Array com os tempos em milissegundos (3 segundos, 1 minuto, 5 minutos, 9 minutos)
+    const intervalos = [3000, 60000, 300000, 540000];
 
-    // Função para fechar a notificação após 3 minutos (180.000 milissegundos)
+    // Seleciona aleatoriamente um intervalo do array
+    const intervaloAleatorio = intervalos[Math.floor(Math.random() * intervalos.length)];
+
+    // Exibe a notificação após o tempo aleatório escolhido
     setTimeout(function() {
-        document.getElementById('whatsappNotification').style.display = 'none';
-    }, 180000); // 3 minutos em milissegundos
-}, 5000);
+        document.getElementById('whatsappNotification').style.display = 'block';
 
+        // Oculta a notificação após 3 minutos (180.000 milissegundos)
+        setTimeout(function() {
+            document.getElementById('whatsappNotification').style.display = 'none';
+        }, 180000); // 3 minutos
+    }, intervaloAleatorio);
+}
+
+// Chama a função para iniciar a exibição aleatória da notificação
+mostrarNotificacaoAleatoria();
