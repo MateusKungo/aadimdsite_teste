@@ -12,6 +12,13 @@ function redirectToWhatsApp() {
 }
 
 // Exibe a notificação após 5 segundos
+// Função para exibir a notificação após 5 segundos
 setTimeout(function() {
     document.getElementById('whatsappNotification').style.display = 'block';
-}, 5000); 
+
+    // Função para fechar a notificação após 3 minutos (180.000 milissegundos)
+    setTimeout(function() {
+        document.getElementById('whatsappNotification').style.display = 'none';
+    }, 180000); // 3 minutos em milissegundos
+}, 5000);
+
